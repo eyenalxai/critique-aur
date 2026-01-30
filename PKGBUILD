@@ -2,7 +2,7 @@
 
 pkgname=critique
 pkgver=0.1.75
-pkgrel=2
+pkgrel=1
 pkgdesc="A beautiful terminal UI for reviewing git diffs with syntax highlighting"
 arch=(x86_64)
 url="https://github.com/remorses/critique"

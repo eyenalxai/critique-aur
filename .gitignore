@@ -3,4 +3,5 @@ src/
 pkg/
 *.tar.zst
 *.tar.gz
+*-x86_64-build.log
 

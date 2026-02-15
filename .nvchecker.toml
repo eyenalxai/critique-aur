@@ -1,0 +1,4 @@
+[critique]
+source = "regex"
+url = "https://github.com/remorses/critique/tags"
+regex = "critique@([0-9.]+)"

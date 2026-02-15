@@ -1,8 +1,8 @@
 # Maintainer: roehistat <mail at iyxeyl.me>
 
 pkgname=critique
-pkgver=0.1.104
-pkgrel=2
+pkgver=0.1.105
+pkgrel=1
 pkgdesc="A beautiful terminal UI for reviewing git diffs with syntax highlighting"
 arch=(x86_64)
 url="https://github.com/remorses/critique"
@@ -11,7 +11,7 @@ depends=(git)
 makedepends=(bun)
 options=('!strip' '!debug')
 source=("$pkgname::git+$url.git#tag=$pkgname@$pkgver")
-sha256sums=('38623d18747f05c8cda2cec003644fcd7baccbba7d33e7e6ac21fb277c5659c8')
+sha256sums=('1031b17608bed87bc7980cd20fa8c281a68ee04f7f8aa0f5a7def7f7741180bd')
 
 build() {
   cd "$srcdir/$pkgname"

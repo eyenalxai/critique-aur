@@ -1,7 +1,7 @@
 # Maintainer: roehistat <mail at iyxeyl.me>
 
 pkgname=critique
-pkgver=0.1.118
+pkgver=0.1.123
 pkgrel=1
 pkgdesc="A beautiful terminal UI for reviewing git diffs with syntax highlighting"
 arch=(x86_64)
@@ -11,8 +11,8 @@ depends=(bun git)
 options=('!strip' '!debug')
 
 source=("$pkgname::git+$url.git#tag=$pkgname@$pkgver" "critique.sh")
-sha256sums=('cd289c26bcbdcf29c928bafad29b9fa149a3825358c7949f6eefe435fc6d8854'
-  '334e96257a0e1fe54de1e4ecce1e560c30b9571d62e291edd5732c30408a36bf')
+sha256sums=('64d44cd727b13f4f25f11fa83995e8f501feaca095be3919426a5cd36cb9934a'
+  'da25b3c236a78420d4ae39c1993183d5e6a1ae601a47f3367a2d960034a6397f')
 
 package() {
   cd "$srcdir/$pkgname"

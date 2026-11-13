@@ -9,7 +9,7 @@ pkgbase = critique
 	depends = git
 	options = !strip
 	options = !debug
-	source = critique::git+https://github.com/remorses/critique.git#tag=critique@0.4.0
-	sha256sums = 99b531a12261d41ffe2439598d07f0815e84e28642b73a81c9be94fdfc9fd60a
+	source = critique-0.4.0.tar.gz::https://github.com/remorses/critique/archive/refs/tags/critique@0.4.0.tar.gz
+	sha256sums = ef297160eabb2bf1d5f62a31cba15f710ae090a356351f14eb70b969b74cee2a
 
 pkgname = critique

@@ -10,12 +10,13 @@ license=('MIT')
 depends=(git)
 makedepends=(bun)
 options=('!strip' '!debug')
+_src="${pkgname}-${pkgname}-${pkgver}"
 
-source=("$pkgname::git+$url.git#tag=$pkgname@$pkgver")
-sha256sums=('99b531a12261d41ffe2439598d07f0815e84e28642b73a81c9be94fdfc9fd60a')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/remorses/critique/archive/refs/tags/$pkgname@$pkgver.tar.gz")
+sha256sums=('ef297160eabb2bf1d5f62a31cba15f710ae090a356351f14eb70b969b74cee2a')
 
 prepare() {
-  cd "$pkgname"
+  cd "$srcdir/$_src"
 
   # PDF export reads the font from a path relative to the entry point, which in
   # a compiled executable is the bunfs root (where the --asset below lands)
@@ -26,7 +27,7 @@ prepare() {
 }
 
 build() {
-  cd "$pkgname"
+  cd "$srcdir/$_src"
   bun install --frozen-lockfile --linker isolated
 
   # @parcel/watcher picks its prebuilt native module with a dynamic require()
@@ -60,13 +61,13 @@ build() {
 }
 
 check() {
-  cd "$pkgname"
+  cd "$srcdir/$_src"
   local output
   output=$(./dist/critique --version)
   [[ $output == "critique/$pkgver"* ]]
 }
 
 package() {
-  cd "$pkgname"
+  cd "$srcdir/$_src"
   install -Dm755 dist/critique "$pkgdir/usr/bin/critique"
 }
